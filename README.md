@@ -28,7 +28,6 @@ Aşağıdaki gibi enpointe isteği iletebiliriz.
 ![PostmanTest](https://drive.google.com/uc?export=view&id=14f7YippNAHCc3Di9iLdQT-JBBgQpe14S)
 
 ## 🧰 Spring Boot Uygulama Akışı
-
 - `ChatController`, HTTP isteklerini alır ve doğrudan `ChatService`’e yönlendirir.
 - `ChatService`, kullanıcı girdisini karşılar ve uygun bir prompt oluşturur.
 -  **Retrieval Augmented Generation**: Uygulama başlatıldığında `RagConfiguration` ve `RagService` ile sağlıkla ilgili sorular ve cevaplardan oluşan veri seti [MedQuAD](https://www.kaggle.com/datasets/pythonafroz/medquad-medical-question-answer-for-ai-research)'ın bir kısmı `nomic-embed-text:v1.5` modeliyle vektörlere dönüştürülmüştür.
