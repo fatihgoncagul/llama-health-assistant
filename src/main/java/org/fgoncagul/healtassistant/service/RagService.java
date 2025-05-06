@@ -6,7 +6,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.ai.document.Document;
 import org.springframework.ai.transformer.splitter.TextSplitter;
 import org.springframework.ai.transformer.splitter.TokenTextSplitter;
-import org.springframework.ai.vectorstore.SimpleVectorStore;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.stereotype.Service;
 
@@ -29,7 +28,7 @@ public class RagService {
         List<Document> documents = new ArrayList<>();
         Path csvPath = Paths.get(CSV_PATH);
         try (BufferedReader reader = Files.newBufferedReader(csvPath)) {
-            reader.readLine(); // header'ı atla
+            reader.readLine();
             String line;
             int count = 0;
             while ((line = reader.readLine()) != null && count < MAX_LINES) {
